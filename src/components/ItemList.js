@@ -30,8 +30,8 @@ export default function ItemList (){
   ,[madm]) 
 
     return (
-        <div className='my-carousel mt-4'>
-            <h3 className='list-item__header'>DANH SÁCH MÓN ĂN</h3>
+        <div className='my-body mt-4'>
+            <h3 className='list-item__header'>DANH SÁCH SẢN PHẨM</h3>
             <div className='row text-center'>
                 {products.map(product=>{
                     return (

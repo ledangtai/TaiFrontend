@@ -47,6 +47,7 @@ function Login(){
                                 <div className="login-ct">
 
                                 <div className="col-md-6 m-auto">
+                                <div className="login-sp">
                                 <form>
                                     <div className="form-group">
                                     <label htmlFor="email" style={{color:'tomato',fontSize:'25px'}}>TÀI KHOẢN</label>
@@ -57,10 +58,11 @@ function Login(){
                                     <input type="password" name="password" className="form-control" id="password" onChange={alterInput} placeholder="Nhập mật khẩu" />
                                     </div>
                                     <a href ="/register">Tạo tài khoản</a>
-                                    <button onClick={handleSubmit} type="submit" className="btn btn-primary float-right">
+                                    <button onClick={handleSubmit} type="submit" className="btn btn-danger float-right">
                                     Đăng nhập
                                     </button>
                                 </form>
+                                </div>
                                 </div>
                             </div>
 

@@ -47,4 +47,9 @@
 }
 .image{
     transition: all 0.4s;
+    margin-top: -20px;
+    overflow: hidden;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+
 }

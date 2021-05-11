@@ -2,7 +2,7 @@
     margin-right: 40px;
 }
 .search{
-    width: 25%;
+    width: 20%;
     margin-left: 100px;
 }
 .logo{
@@ -22,7 +22,12 @@
     max-height: 400px;    
     overflow: scroll;
 }
-
+.search-bar{
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: 100%;
+    
+}
 @media (max-width: 574px){
  
     .search{

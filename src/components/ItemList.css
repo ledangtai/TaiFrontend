@@ -2,10 +2,15 @@
     margin-top: 40px;
     text-align: left;
     margin-bottom: 60px;
-    background-color: #9e2222;
     padding-top: 10px;
-    padding-left: 10px;
-    color:white;
+    padding-left: 0px;
+    color:black;
     padding-right: 10px;
-    border-radius: 10px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #707070;
+    width: fit-content;
+}
+.my-body{
+    width: 86%;
+    margin: auto;
 }

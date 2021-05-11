@@ -87,12 +87,12 @@ function Topbar(){
             <div className='d-none d-sm-block'>
                 <div className='topbar d-flex justify-content-around'>
                     <div className='topbar__contact d-flex'>              
-                        <p>Công ty thực phẩm đồ ăn nhanh phúc đồng</p>
+                        <p>SHOP ĐỒ THỂ THAO T&T</p>
                     </div>
                     <div className='topbar__more d-flex'>
                         {isLogin()}
                         <Link to='/cart'>
-                         <p className="cart item mr-3">Giỏ hàng</p>
+                         <button className="btn btn-info">Giỏ hàng</button>
                         </Link>
                         {isLogout()}
                     </div>

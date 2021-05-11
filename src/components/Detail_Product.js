@@ -103,18 +103,19 @@ function Detail_Product(){
         
         <div className="row detail_product">
             <div className="col-7">
-                <img src={sanpham?.photo} alt="hoa picture" style={{width:"90%"}}/>
+                <img src={sanpham?.photo} alt="hoa picture" style={{width:"90%",borderRadius:20}}/>
+                <img src="https://cdn.worldvectorlogo.com/logos/dodge-sport-4.svg" style={{width:600}}/>
                 {danhgia?
                     <div style={{marginTop:'40px'}}>
                         <ReactStars
                             count={5}
                             onChange={ratingChanged}
-                            size={20}
+                            size={22}
                             value={dgUser}
                             emptyIcon={<i className="far fa-star"></i>}
                             halfIcon={<i className="fa fa-star-half-alt"></i>}
                             fullIcon={<i className="fa fa-star"></i>}
-                            activeColor="#ffd700"
+                            activeColor="#94fc03"
                         />
                         
                     </div>    :''
@@ -122,7 +123,16 @@ function Detail_Product(){
             </div>
             <div className="col-5">
                 <h3>{sanpham?.tensp}</h3>
-                <h4 className="text-danger">{sanpham?.dongia} đ</h4>
+                <hr/>
+                <div className="row">
+                    <div className='col-6'>
+                        <h4>Giá tiền</h4>
+                    </div>
+                    <div className='col-6'>
+                    <h4 className="text-danger text-right">{sanpham?.dongia} đ</h4>
+                    </div>
+                </div>
+                <hr/>
                 
                 <div className="row">
                     <div className="col-6">
@@ -147,20 +157,22 @@ function Detail_Product(){
                         <p>Mô chi tiết</p>
                     </div>
                     <div className="col-12 text-left">
-                        <p>{sanpham?.mota_chitiet}</p>
+                        <textarea className="form-control" rows={4} defaultValue={sanpham?.mota_chitiet} disabled />
                     </div>
                 </div>
                 <div className="row mt-4">
-                    <div className="col-7">
+                    <div className="col-3">
                         <input type="number" className="form-control" min="0" defaultValue="1" max={sanpham?.soluong - getMaxSL(sanpham?.masp)} disabled={sanpham?.soluong == 0 || (sanpham?.soluong - getMaxSL(sanpham?.masp))<=0} />
                     </div>
-                    <div className="col-5   ">
-                        <button className="btn btn-warning" onClick={()=>addCart(sanpham.masp)}><i className="fa fa-shopping-cart" aria-hidden="true"></i> Add to card</button>
+                    <div className="col-9   ">
+                        <button className="btn btn-outline-danger" onClick={()=>addCart(sanpham.masp)}> THÊM VÀO GIỎ</button>
                     </div>
                 </div>
                 
             </div>
-            <div className='col-12'>
+            
+            <div className="row" style={{margin:'60px 0'}}>
+            <div className='col-6'>
                     <RateChart 
                             key={masp}
                             five = {rate?.five}
@@ -172,8 +184,7 @@ function Detail_Product(){
                             soluong = {rate?.soluong}
                         />
             </div>
-            <div className="row">
-            <div className="col-12 mb-4 mt-4">
+            <div className="col-6 mb-4 mt-4">
                 <h5>   Bình luận khách hàng</h5>
                 <div class="fb-comments" data-href={"https://localhost:8080/"+masp} data-width="" data-numposts="5"></div>
             </div>

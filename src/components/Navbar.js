@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import logo from './logo.png'
+import logo from '../image/logo.png'
 import './Navbar.css'
 import axiosClient from '../API/AxiosClient'
 import {
@@ -39,14 +39,12 @@ function Navbar(){
          </a>
          <Link to='/'>
           <a className="navbar-brand d-none d-sm-block" to="/#">
-              FASTFOOD
+              <img src={logo} style={{width:50}} className="mr-4"/>
+                T&T SHOP
           </a>
          </Link>
         <form className='search input-group ' onFocus={()=>setIsSearch(true)} onBlur={()=>setIsSearch(false)}>
-            <input className='form-control' placeholder='Nhập để tìm kiếm . . .' onChange={handleSearch} />
-            <div className="input-group-append">
-                <button className='btn btn-warning'><i className="fa fa-search" aria-hidden="true"></i></button>
-            </div>
+            <input className='search-bar' placeholder='Nhập để tìm kiếm . . .' onChange={handleSearch} />
             {isSearch?
               <div className="searchBox">
               <div className="table-responsive">
@@ -75,12 +73,12 @@ function Navbar(){
                </button>
                <div className="collapse navbar-collapse" id="navbarText">
                  <ul className="navbar-nav ml-auto">
-                   <li className="nav-item">
-                     <a className='nav-link'>TRANG CHỦ</a>
+                   <li className="nav-item active">
+                     <a className='nav-link'><i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
                    </li>
                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DANH MỤC</a>
-                            <div className="dropdown-menu">
+                        <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-alt" aria-hidden="true"></i> DANH MỤC</a>
+                            <div className="dropdown-menu bg-info">
                                  {danhmuc?.map(dm=>{
                                    return (
                                     <Link to = {"/danhmuc/"+dm.madm}><p className="dropdown-item">{dm.tendm}</p></Link>
@@ -89,10 +87,16 @@ function Navbar(){
                             </div>
                    </li>
                    <li className="nav-item">
-                     <a className='nav-link'>THÔNG TIN</a>
+                     <a className='nav-link'>GIỚI THIÊU</a>
                    </li>
                    <li className="nav-item">
                      <a className='nav-link'>LIÊN HỆ</a>
+                   </li>
+                   <li className="nav-item">
+                     <a className='nav-link'>ĐỐI TÁC KINH DOANH</a>
+                   </li>
+                   <li className="nav-item">
+                     <a className='nav-link'>TẦM NHÌN CHIẾN LƯỢC</a>
                    </li>
                  </ul>
                  
