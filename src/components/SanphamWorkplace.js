@@ -76,10 +76,10 @@ function Admin_workplace({slide}){
            // console.log('dsds')
             const fileNameFirst = file?.name;
             const fileNameFinal = fileNameFirst?.replace(/ /g,'')
-            var storageRef =  store.ref().child("quoc/"+fileNameFinal)
+            var storageRef =  store.ref().child("tai/"+fileNameFinal)
             
             await storageRef.put(file);
-            store.ref().child('quoc').child(fileNameFinal).getDownloadURL().then(url=> setFileUrl(url));
+            store.ref().child('tai').child(fileNameFinal).getDownloadURL().then(url=> setFileUrl(url));
     }
     useEffect(()=>{
         axios.get(process.env.REACT_APP_API+'sanpham/')
