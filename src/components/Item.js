@@ -31,7 +31,7 @@ export default function Item ({product}){
     }
   }
     return (
-          <div className='myItem' style={{width:'80%',borderRadius:'10%'}}>
+          <div className='myItem' style={{width:'90%',borderRadius:'10%'}}>
             <div>
               <div onClick={()=> window.location.href="/product/"+product.masp}>
                 <div className="image"><img className="card-img-top" style={{width:'100%',height:'200px'}} src={product.photo} alt="profile"/></div>
@@ -42,7 +42,7 @@ export default function Item ({product}){
                   
                 </div>
               </div>
-              <button className='btn btn-outline-danger mb-2  ' onClick={()=>addCart(product.masp)}>THÊM GIỎ HÀNG</button>
+              <button className='btn btn-outline-danger mb-2  ' onClick={()=>addCart(product.masp)}><i class="fa fa-cart-plus" aria-hidden="true"></i> THÊM GIỎ HÀNG</button>
               <button className='btn btn-success' onClick={()=> window.location.href="/product/"+product.masp}>XEM SẢN PHẨM</button>
             </div>
             

@@ -58,7 +58,7 @@ function App() {
           <Header />
           <ViewOrder />
           <About />
-          <Commit />
+    
           <Bottom />
           
         </Route>
@@ -77,7 +77,7 @@ function App() {
         <Route path="/login" exact>
           <Header />
           <Login />
-          <About />
+         
           <Bottom />
           
         </Route>
@@ -91,7 +91,7 @@ function App() {
         <Route path="/register" exact>
           <Header />
           <Register />
-          <About />
+       
           <Bottom />
           
         </Route>

@@ -25,11 +25,11 @@ function Login(){
             let quyen = response.data.quyen.maquyen;
             myStorage.setItem('quyen',quyen)
             if(quyen == 1)
-                history.push('/admin/index')
+                history.push('/admin/sanpham')
             else if(quyen == 2)
                 history.push('/')
             else if(quyen == 3)
-            history.push('/admin/index')
+            history.push('/admin/sanpham')
             
         })
         .catch(erro => alert('login thất bại !!!'))
@@ -42,25 +42,26 @@ function Login(){
                         <Detail_Portfolio />
                     </div> */}
                     <div className='col-12'>     
-
+                       
                         <div className="login_container">
                                 <div className="login-ct">
 
                                 <div className="col-md-6 m-auto">
                                 <div className="login-sp">
                                 <form>
+                                <h5 className="dangnhap">ĐĂNG NHẬP</h5>
                                     <div className="form-group">
-                                    <label htmlFor="email" style={{color:'tomato',fontSize:'25px'}}>TÀI KHOẢN</label>
+                                    <label htmlFor="email" style={{color:'tomato',fontSize:'16px', fontWeight:'bolder'}}>TÀI KHOẢN</label>
                                     <input type="email" name="username" className="form-control" id="email" aria-describedby="emailHelp" onChange={alterInput} placeholder="Nhập tài khoản" />
                                     </div>
                                     <div className="form-group">
-                                    <label htmlFor="password" style={{color:'tomato',fontSize:'25px'}}>MẬT KHẨU</label>
+                                    <label htmlFor="password" style={{color:'tomato',fontSize:'16px', fontWeight:'bolder'}}>MẬT KHẨU</label>
                                     <input type="password" name="password" className="form-control" id="password" onChange={alterInput} placeholder="Nhập mật khẩu" />
                                     </div>
-                                    <a href ="/register">Tạo tài khoản</a>
-                                    <button onClick={handleSubmit} type="submit" className="btn btn-danger float-right">
+                                    <button onClick={handleSubmit} type="submit" className="btn btn-danger float-right btn-dangnhap">
                                     Đăng nhập
                                     </button>
+                                    <a style={{marginLeft:'65%', color:'red'}} href ="/register">Tạo tài khoản ?</a>
                                 </form>
                                 </div>
                                 </div>

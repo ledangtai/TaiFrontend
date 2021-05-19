@@ -74,7 +74,7 @@ function Navbar(){
                <div className="collapse navbar-collapse" id="navbarText">
                  <ul className="navbar-nav ml-auto">
                    <li className="nav-item active">
-                     <a className='nav-link'><i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+                     <a href="/" className='nav-link'><i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
                    </li>
                    <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-alt" aria-hidden="true"></i> DANH MỤC</a>

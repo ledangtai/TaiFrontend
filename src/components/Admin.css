@@ -1,6 +1,6 @@
 .header-admin{
     color: white;
-    background-color: #a89e11;
+    background-color: forestgreen;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,9 @@
 }
 .logout{
     text-decoration: none;
-    color: white;
+    color: red;
+    margin-top: 10px;
+    margin-left: -10px;
 }
 .logout:hover{
     text-decoration: none;
@@ -27,8 +29,8 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
-    height: 92vh;
-    background-color: #c56b50;
+    
+    background-color: forestgreen;
     color: white;
     transition: 0.4s all;
 }
@@ -46,7 +48,7 @@
 }
 .slide-bar_list p:hover{
     color: white;
-    background-color: #aca4a0;
+    background-color: #6f8f62c0;
     text-decoration: none;
 }
 .employee{
@@ -149,4 +151,9 @@
 .btn-input{
     width: 100px;
     height: 45px;
+}
+.ml-2{
+   font-weight: bolder;
+   font-family: serif;
+   font-size: 20px;
 }

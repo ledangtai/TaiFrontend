@@ -9,6 +9,9 @@
     padding-bottom: 3px;
     border-bottom: 3px solid #707070;
     width: fit-content;
+    color: forestgreen;
+    font-family: initial;
+    font-weight: bolder;
 }
 .my-body{
     width: 86%;

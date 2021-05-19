@@ -141,7 +141,7 @@ function Admin_workplace({slide}){
         <div className={slide?"workplace":"on-off-workplace"}>
                 <h3 className={!on?"form-head":"d-none"}></h3>  
                 <ul className={!on?"":"d-none"} style={{listStyle:'none'}}>
-                        <li className="" onClick={()=>getInsertSP()}><button className="btn btn-outline-info"><i className="fa fa-plus-square-o" aria-hidden="true"></i>Thêm sản phẩm</button></li>
+                        <li className="" onClick={()=>getInsertSP()}><button className="btn btn-outline-info"><i className="fa fa-plus-square-o" aria-hidden="true"></i> Thêm sản phẩm</button></li>
                 </ul>
                 <div className={!on?"workplace_display":"d-none"}>
                     <table className="table table-striped table-bordered table-hover">
@@ -286,9 +286,9 @@ function Admin_workplace({slide}){
                                     <div className={fileUrl!==''?"":"d-none"}>
                                         <img src={fileUrl} alt="quan" style={{maxWidth:"100%"}}/>
                                     </div>
-                                    <button className="btn btn-warning mt-4 mr-4 btn-input"  type="submit" >Submit</button>
-                                    <button className="btn btn-outline-danger mt-4 mr-4 btn-input" type="reset" onClick={()=> setFileUrl('')}>Reset</button>
-                                    <button className="btn btn-info mt-4 btn-input" onClick={()=>setOn(!on)} type="button">Exit</button>
+                                    <button className="btn btn-warning mt-4 mr-4 btn-input" style={{backgroundColor:'forestgreen', width:'45%', color:'white'}}  type="submit" >Xác Nhận</button>
+                        
+                                    <button className="btn btn-info mt-4 btn-input" style={{backgroundColor:'forestgreen', width:'45%', marginLeft:'8%', color:'white', fontFamily:'serif', fontWeight:'bolder'}} onClick={()=>setOn(!on)} type="button">Thoát</button>
                                 </div>
                                 <div className="col-6">
                                     

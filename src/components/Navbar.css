@@ -1,9 +1,19 @@
+.navbar{
+    background-color: forestgreen !important;
+}
 .navbar-nav{
     margin-right: 40px;
+    
+}
+.navbar-brand{
+    transition-duration: 1s;
+}
+.navbar-brand:hover{
+    transform: scale(1.1);
 }
 .search{
-    width: 20%;
-    margin-left: 100px;
+    width: 25%;
+    
 }
 .logo{
     width: 40px;
@@ -28,9 +38,34 @@
     width: 100%;
     
 }
+.nav-item{
+    cursor: pointer;
+}
+.nav-item .nav-link{
+    transition-duration: 1s;
+    color: rgb(131, 127, 127);
+    font-weight: 700 !important;
+}
+.nav-item .nav-link:hover{
+    color: red !important;
+    transform: scale(1.05);
+}
 @media (max-width: 574px){
  
     .search{
         width: 65%;
     }
-    }
+}
+.mr-4{
+    margin-right: 0.5rem !important ;
+    font-family: initial;
+    font-weight: bolder;
+}
+.dropdown-menu{
+    background-color: rgba(35, 114, 35, 0.705) !important;
+  
+}
+.dropdown-menu p{
+    color: white;
+    font-weight: bolder;
+}

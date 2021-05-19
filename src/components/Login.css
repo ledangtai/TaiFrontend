@@ -2,7 +2,7 @@
     height: 650px;
     position: relative;
     width: 100%;
-    background-image: url('https://media.istockphoto.com/photos/various-sport-equipments-on-grass-picture-id949190756?k=6&m=949190756&s=612x612&w=0&h=dNek5l5xc68G0gCZv-fe0vHP8kjDpAYFrRnSPh8iLyc=');
+    background-image: url('https://c.wallhere.com/photos/d1/89/digital_art_soccer_sport_Adidas-1441095.jpg!d');
     background-position: center;
     background-size: cover  ;
 }
@@ -14,7 +14,22 @@
     
 }
 .login-sp{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.829);
     padding: 60px 10px;
     border-radius: 10px;
+}
+.dangnhap{
+    width: 100%;
+    color: forestgreen;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -20px;
+    font-size: 24px;
+    font-family: serif;
+    font-weight: bolder;
+}
+.btn-dangnhap{
+  background-color: forestgreen !important;
+  width: 90%;
+  margin-right: 5%;
 }

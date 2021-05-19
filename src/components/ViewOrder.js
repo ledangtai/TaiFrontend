@@ -11,7 +11,7 @@ const ViewOrder = ()=>{
     const jwt = myStore.getItem('jwt')
     const [find,setFind] = useState('');
     const history = useHistory()
-    const [on,setOn] = useState(false)
+    const [on,setOn] = useState(true)
     const username = myStore.getItem('username')
     useEffect(()=>{
         if(username)
@@ -75,7 +75,7 @@ const ViewOrder = ()=>{
                           <h6>Tình trạng đơn hàng : {getTinhtrang(dh?.trangthai)}</h6>
                           {dh?.trangthai==0?<p className="text-danger mt-3" onClick={()=>huyDon(dh?.madh)} style={{cursor:'pointer'}}>Hủy đơn hàng</p>:''}
                           <h5 className="mt-4">Danh sách sản phẩm</h5>
-                          <button className="btn btn-outline-info" onClick={()=>setOn(!on)}>Hiển thị</button>
+                          {/* <button className="btn btn-outline-info" onClick={()=>setOn(!on)}>Hiển thị</button> */}
                           </div>
                           {on?
                           <div className="table-responsive">

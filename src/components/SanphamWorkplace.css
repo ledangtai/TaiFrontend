@@ -19,3 +19,37 @@
     background-color: #4369d7;
     color: white;
 }
+.btn-outline-info{
+    width: 20% !important;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: bolder;
+    margin-left: 75%;
+}
+.workplace_display{
+    height: 80vh !important;
+}
+.workplace_display tr th{
+    background-color: forestgreen;
+    color: white;
+}
+.xemchitietdonhang{
+    background: forestgreen !important;
+    color: white;
+    font-family: serif;
+    font-weight: bolder;
+    justify-content: center;
+}
+.xemchitietdonhang .modal-title{
+    margin: 0 auto;
+    margin-left: 35%;
+}
+.modal-header .close{
+    color: white;
+    background: red !important;
+    border-radius: 50%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0 12px;
+    margin-right: -10px;
+}

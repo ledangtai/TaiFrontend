@@ -64,8 +64,8 @@ const Register = ()=>{
                             </select>
                             <p>SỐ ĐIỆN THOẠI</p>
                             <input type="text" className="form-control mb-2 mr-sm-2" placeholder="Nhập số thoại thoại" name="sdt" onChange={changeInput}/>
-                            <button type="submit" className="btn btn-outline-success mr-4">ĐĂNG KÝ</button>
-                            <button type="reset" className="btn btn-warning">LÀM MỚI</button>
+                            <button type="submit" className="btn btn-outline-success mr-4" style={{backgroundColor:'forestgreen', width:'25%', color:'white'}}>ĐĂNG KÝ</button>
+                        
                         </div>
                         <div className="col-6">
                         <p>EMAIL</p>

@@ -40,10 +40,7 @@ function Admin(){
             Page = <SanphamWorkplace slide={slide}/>
             break;
         }
-        case 'index':{
-            Page = <div style={{maxWidth:'85%',height:'92vh'}}><img src="https://wallpaperaccess.com/full/825322.jpg" alt="picture" style={{width:'100%',height:'100%',overflowY:'hidden'}}/></div>
-            break;
-        }
+       
         case 'danhmuc':{
             Page = <DanhMucWorkplace slide={slide}/>
             break;
@@ -65,17 +62,18 @@ function Admin(){
         <div>
             <div className='header-admin'>       
                 <h3 className="logo-admin"><span className="slide-button" onClick={toggleSlide}><i className="fa fa-bars" aria-hidden="true"></i></span>TRANG QUẢN TRỊ</h3>
+                <h4 className="employee-name" style={{marginRight:'-800px'}}>{quyen == 1?'ADMIN':user?.ho + ' ' + user?.ten}</h4>
                 <p onClick={()=>{myStore.removeItem('username') ; history.push("/")}} className="logout"><i className="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</p>
             </div>
             <div className='body-admin'>
                 <div className={slide?"slide-bar":'slide-bar on-off'}  >
                     <div className={slide?"employee":"employee on-off-employee"}>
-                        <div className="employee-image">
-                            <img style={{width:'250px'}} src="https://scontent.fsgn1-1.fna.fbcdn.net/v/t1.18169-9/13900235_702741596543556_2970957999726811456_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7bPiGJwFTWkAX_UdOhE&_nc_ht=scontent.fsgn1-1.fna&oh=faeee7aaeb0f7efe00e696e7bdf5bfd2&oe=60BFE964"/>
+                        <div className="employee-image" style={{backgroundColor:'white', padding:'10px'}}>
+                            <img style={{width:'250px'}} src="https://upload.wikimedia.org/wikipedia/vi/thumb/5/5c/Chelsea_crest.svg/1200px-Chelsea_crest.svg.png"/>
                         </div>
-                        <h4 className="employee-name">{quyen == 1?'ADMIN':user.ho + ' ' + user.ten}</h4>
+                        
                     </div>
-                    <div className={slide?"slide-bar_list":"slide-bar_list on-off-menu"}>
+                    <div className={slide?"slide-bar_list":"slide-bar_list on-off-menu"} style={{marginTop:'-10px'}}>
                         <Link to="/admin/sanpham"><p><span className="ml-2" >Danh sách sản phẩm</span></p></Link>
                         <Link to="/admin/danhmuc"><p><span className="ml-2">Danh sách danh mục</span></p></Link>
                         {quyen == 1?
@@ -85,7 +83,7 @@ function Admin(){
                             </div>:''
                         }
                         <Link to="/admin/donhang"><p><span className="ml-2">Danh sách đơn hàng</span></p></Link>
-                        <Link to="/admin/sanpham"><p><span className="ml-2">Thoát</span></p></Link>
+                        <Link to="/"><p><span className="ml-2" style={{color:'red'}}>Thoát</span></p></Link>
                     </div>
                     
                 </div>

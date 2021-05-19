@@ -92,7 +92,7 @@ function Topbar(){
                     <div className='topbar__more d-flex'>
                         {isLogin()}
                         <Link to='/cart'>
-                         <button className="btn btn-info">Giỏ hàng</button>
+                         <button className="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</button>
                         </Link>
                         {isLogout()}
                     </div>
@@ -113,15 +113,15 @@ function Topbar(){
             <div className="modal fade" id="accountInfo" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-xl" role="document">
                   <div className="modal-content">
-                    <div className="modal-header bg-warning text-white">
+                    <div className="modal-header bg-warning text-white thongtintaikhoan">
                       <h5 className="modal-title" id="exampleModalLabel">THÔNG TIN TÀI KHOẢN</h5>
                       <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                       </button>
                     </div>
                     
-                    <div className="modal-body">
-                        <h5>Thông tin về khách hàng : {user?.ho + ' ' + user?.ten}</h5>
+                    <div className="modal-body" >
+                        <h5 >Thông tin về khách hàng : <strong style={{color:'red'}}>{user?.ho + ' ' + user?.ten}</strong></h5>
                     <div className="row">
                     <div className=" col-6">
                       <table className="table table-borderless table-font mt-4">
@@ -165,12 +165,12 @@ function Topbar(){
                             <td><input type="text" className="form-control mb-2 mr-sm-2" defaultValue={user?.diachi} name="diachi" onChange={handleChange}/> </td>
                           </tr>
                           <tr>
-                            <td>User?name</td>
+                            <td>UserName</td>
                             <td><input type="text" className="form-control mb-2 mr-sm-2" defaultValue={user?.taikhoan?.username} name="username" onChange={handleChange}/></td>
                           </tr>
                           <tr>
                             <td>Password</td>
-                            <td><input type="text" className="form-control mb-2 mr-sm-2" defaultValue={user?.taikhoan?.password} name="password" onChange={handleChange}/></td>
+                            <td><input type="password" className="form-control mb-2 mr-sm-2" defaultValue={user?.taikhoan?.password} name="password" onChange={handleChange}/></td>
                           </tr>
                         </tbody>
                       </table>
@@ -179,8 +179,8 @@ function Topbar(){
             
                     </div>
                     <div className="modal-footer">
-                      <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={()=>initialUserUpdate(user)}>Thoát</button>
-                      <button type="button" className="btn btn-warning" data-dismiss="modal" onClick={submitUpdate}>Lưu thay đổi</button>
+                      <button type="button" className="btn btn-danger btn_thongtintaikhoan" data-dismiss="modal" onClick={()=>initialUserUpdate(user)}>Thoát</button>
+                      <button type="button" className="btn btn-warning btn_thongtintaikhoan" data-dismiss="modal" onClick={submitUpdate}>Lưu thay đổi</button>
                     </div>
                   </div>
                 </div>

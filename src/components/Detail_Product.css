@@ -16,3 +16,9 @@
 .nav-link:hover{
     color: #4d4c4c;
 }
+.btn-outline-danger{
+    background-color: forestgreen;
+    color: ghostwhite;
+    font-family: initial;
+    font-weight: bolder;
+}

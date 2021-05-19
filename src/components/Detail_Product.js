@@ -136,7 +136,7 @@ function Detail_Product(){
                 
                 <div className="row">
                     <div className="col-6">
-                        <p>Mô tả ngắn</p>
+                        <p>Mô Tả</p>
                     </div>
                     <div className="col-6 text-right">
                         <p>{sanpham?.mota_ngan}</p>
@@ -145,10 +145,10 @@ function Detail_Product(){
                 
                 <div className="row">
                     <div className="col-6">
-                        <p>Hàng trong kho</p>
+                        <p>Số Lượng </p>
                     </div>
                     <div className="col-6 text-right">
-                        <p>Còn : {sanpham?.soluong}</p>
+                        <p> {sanpham?.soluong}</p>
                     </div>
                 </div>
                 
@@ -165,7 +165,7 @@ function Detail_Product(){
                         <input type="number" className="form-control" min="0" defaultValue="1" max={sanpham?.soluong - getMaxSL(sanpham?.masp)} disabled={sanpham?.soluong == 0 || (sanpham?.soluong - getMaxSL(sanpham?.masp))<=0} />
                     </div>
                     <div className="col-9   ">
-                        <button className="btn btn-outline-danger" onClick={()=>addCart(sanpham.masp)}> THÊM VÀO GIỎ</button>
+                        <button className="btn btn-outline-danger" onClick={()=>addCart(sanpham.masp)}><i class="fa fa-cart-plus" aria-hidden="true"></i> THÊM VÀO GIỎ</button>
                     </div>
                 </div>
                 

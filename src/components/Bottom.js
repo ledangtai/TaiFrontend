@@ -13,8 +13,8 @@ export default function Bottom(){
                 </div>
             </div>
             <footer className='text-center'>
-                <span className="copyright"> &copy; 2020-08-22</span>
-                <div>CÔNG TY T&T ĐĂNG TÀI
+                <span className="copyright"> &copy; copyright dangtai05@gmail.com</span>
+                <div>CÔNG TY T&T
                 </div>
             </footer>
         </div>

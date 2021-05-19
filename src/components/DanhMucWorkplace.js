@@ -121,9 +121,9 @@ function Admin_workplace({slide}){
                                     <label>Tên danh mục</label>
                                     <input className="form-control" placeholder="Please enter here ..." ref={register} name='tendm'/>
                                 </div>        
-                                <button className="btn btn-warning mt-4 mr-4 btn-input"  type="submit" >Submit</button>
-                                <button className="btn btn-outline-danger mt-4 mr-4 btn-input" type="reset">Reset</button>
-                                <button className="btn btn-info mt-4 btn-input" onClick={()=>setOn(!on)} type="button">Exit</button>
+                                <button className="btn btn-warning mt-4 mr-4 btn-input" style={{backgroundColor:'forestgreen', width:'45%', color:'white', fontFamily:'serif', fontWeight:'bolder'}} type="submit" >Xác Nhận</button>
+                              
+                                <button className="btn btn-info mt-4 btn-input" style={{backgroundColor:'forestgreen', width:'45%', marginLeft:'8%', color:'white', fontFamily:'serif', fontWeight:'bolder'}}onClick={()=>setOn(!on)} type="button">Thoát</button>
                             </div> 
                         </div>
                  </form>

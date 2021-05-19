@@ -1,3 +1,6 @@
 .my-carousel{
     padding: 0 0px;
 }
+.my-carousel img{
+    height: 500px;
+}

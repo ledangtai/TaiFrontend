@@ -105,7 +105,7 @@ export default function Cart(){
      const sendEmail = (myMessage)=>{
             var templateParams = {
                 to_name:user.ho + ' '  + user.ten,
-                from_name: 'Công ty FastFOOD',
+                from_name: 'Shop Thể Thao T&T',
                 message:'Bạn đã đặt đơn thành công',
                 notes: 'Check this out!',
                 email: user.email
@@ -180,24 +180,24 @@ export default function Cart(){
                 <h3>GIỎ HÀNG</h3>
             </div>
             <div className='container'>
-                <div className='row' style={{marginBottom:100,backgroundColor:'#c1bd78',marginTop:30,borderRadius:10,height:'70vh',overflow:'scroll'}}>
+                <div className='row' style={{marginBottom:100,marginTop:30,borderRadius:10,height:'80vh',overflow:'scroll'}}>
                     
-                    <div className='col-7'>  
-                        <h4 className="cart-header">DANH SÁCH GIỎ HÀNG</h4>            
+                    <div className='col-7' style={{backgroundColor:'forestgreen', borderRadius:'10px'}}>  
+                        <h4 className="cart-header danhsachgiohang" >DANH SÁCH GIỎ HÀNG</h4>            
                         <table className="table table-border table-cart">
                             {cart.map(c=>(
                                 <tr key={c.sanpham.masp}>
-                                    <td onClick={()=> deleteCart(c.sanpham.masp)} className="deleteCart">&#10005;</td>
-                                    <td><img src={c.sanpham.photo} alt="picture" style={{width:"70px",marginRight:"30px"}} /> {c.sanpham.tensp}</td>
+                                   <td><input type="checkbox" className="form-check-input" onClick={(e)=>checkSP(e,c.sanpham,c.soluong)}/></td>
+                                    <td><img src={c.sanpham.photo} alt="picture" style={{width:"70px",marginRight:"30px", color:'white'}} /><span style={{color:'white', fontWeight:'bolder'}}> {c.sanpham.tensp} </span></td>
                                     <td style={{width:"15%"}}><input type="number" className="form-control" min="1" max={c.sanpham?.soluong} defaultValue={c.soluong} onClick={(e)=>changeNum(e,c.sanpham)} /></td>
-                                    <td><p className="text-danger">{c.sanpham.dongia * c.soluong} đ</p></td>
-                                    <td><input type="checkbox" className="form-check-input" onClick={(e)=>checkSP(e,c.sanpham,c.soluong)}/></td>
+                                    <td><p className="text-danger" style={{fontWeight:'bolder', marginTop:'10px', color:'cornsilk'}}>{c.sanpham.dongia * c.soluong} đ</p></td>
+                                    <td onClick={()=> deleteCart(c.sanpham.masp)} className="deleteCart">&#10005;</td>
                                 </tr>
                             ))}
                         </table>
                         
                         
-                        {sanpham.length>0?<button onClick={order} className="btn btn-danger btn-lg mt-4" >ĐẶT HÀNG</button>:''}
+                  
                           <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div className="modal-dialog modal-lg" role="document">
                                 <div className="modal-content">
@@ -258,7 +258,7 @@ export default function Cart(){
                               </div>
                             </div>
                     </div>
-                    <div className='col-4' style={{marginLeft:30,borderLeft:'2px solid tomato'}}>  
+                    <div className='col-4' style={{marginLeft:30,backgroundColor:'forestgreen',borderRadius:'10px'}}>  
                     <div className="cart-header">
                     
                         <div className="cart-total mt-4">
@@ -267,8 +267,9 @@ export default function Cart(){
                         </div>
                         <div className="cart-total text-success">
                             <h4>Tạm tính :</h4>
-                            <h4>{total} đ</h4>
+                            <h4 style={{color:'red'}}>{total} đ</h4>
                         </div>
+                        {sanpham.length>0?<button onClick={order} className="btn btn-danger btn-lg mt-4 btn-dathang" >ĐẶT HÀNG</button>:''}
                       </div>         
                     </div>
                 </div>

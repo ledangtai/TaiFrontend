@@ -17,6 +17,7 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
     padding: 15px 0;
     transition: all 0.5s;
+    margin-bottom: 50px;
 }
 .page-link{
     color: #448000 !important;
@@ -39,8 +40,12 @@
     cursor: pointer;
     color: #448000;
 }
+.myItem img:hover{
+    transform: scale(1.1);
+}
 .image img{
     width: 100%;
+    transition-duration: 1s;
 }
 .card{
     overflow: hidden;
@@ -52,4 +57,7 @@
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
 
+}
+.myItem h5{
+    color: forestgreen;
 }
