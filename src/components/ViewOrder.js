@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import './ViewOrder.css'
 import {useHistory} from 'react-router-dom'
-
+import NumberFormat from 'react-number-format';
 const ViewOrder = ()=>{
  
     const [user,setUser] = useState(null);
@@ -67,7 +67,7 @@ const ViewOrder = ()=>{
                 {donhang?.map(dh=>{
                     if(dh?.madh.toLowerCase().includes(find.toLowerCase()))
                     return (
-                        <div style={{width:'100%',marginTop:40}}>
+                        <div style={{width:'100%',marginTop:40, borderTop:'1px solid red',borderBottomColor:'1px solid red'}}>
                           <div className="jumbotron">
                           <h5 className="mb-2">Mã đơn hàng : {dh?.madh}</h5>
                           <h6>Ngày đặt : {dh?.ngaydat}</h6>
@@ -80,9 +80,9 @@ const ViewOrder = ()=>{
                           {on?
                           <div className="table-responsive">
                           <table className="table table-borderless table-hover" style={{fontSize:19}} >
-                            <tbody>
+                            <tbody style={{border:'1px solid forestgreen'}}>
                               {dh?.listCTDH?.map(ct=>(
-                                <div>
+                                <div style={{borderBottomColor:'darkgray'}}>
                                   <hr/>
                                   <tr>
                                     <td style={{color:'#868688'}}>Mã sản phẩm</td>
@@ -98,7 +98,7 @@ const ViewOrder = ()=>{
                                   </tr>
                                   <tr>
                                     <td style={{color:'#868688'}}>Giá</td>
-                                    <td>{ct.sanpham?.dongia} $</td>
+                                    <td><NumberFormat style={{border:'0', width:'100px'}} value = {ct.sanpham?.dongia} thousandSeparator={true}/>VNĐ</td>
                                   </tr>
                                   <tr>
                                     <td style={{color:'#868688'}}>Hình ảnh</td>

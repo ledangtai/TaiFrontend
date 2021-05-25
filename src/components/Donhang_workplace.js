@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import './SanphamWorkplace.css'
+import NumberFormat from 'react-number-format';
 function Donhang_workplace
 ({slide,user}){
     const [on,setOn] = useState(false)
@@ -109,7 +110,7 @@ function Donhang_workplace
                                 return (
                                     <tr key={dh.madh}>
                                         <td>{dh.madh}</td>
-                                       <td>{dh.tongtien}</td>
+                                       <td><NumberFormat  value={dh.tongtien} thousandSeparator={true} style={{border:'0', width:'100px', textAlign:'center'}} /> </td>
                                        <td>{dh.ngaydat}</td>
                                        <td>
                                        {tt == ''?

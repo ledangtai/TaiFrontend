@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import hoa from '../image/hoa4.jpg'
 import './Item.css'
+import NumberFormat from 'react-number-format';
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,8 +39,8 @@ export default function Item ({product}){
                 <div className="mt-4">
                   <h5>{product.tensp}</h5>
                   <p>{product.mota_ngan}</p>
-                  <p className="text-danger">{product.dongia} $</p>
-                  
+                  <p className="text-danger" id="text-danger"  > <NumberFormat style={{border:'0', textAlign:'center', width:'80px',color:'red'}} value={product.dongia} thousandSeparator={true} />VNĐ</p> 
+                                 
                 </div>
               </div>
               <button className='btn btn-outline-danger mb-2  ' onClick={()=>addCart(product.masp)}><i class="fa fa-cart-plus" aria-hidden="true"></i> THÊM GIỎ HÀNG</button>
@@ -47,5 +48,7 @@ export default function Item ({product}){
             </div>
             
         </div>
+        
     )
+    
 }

@@ -4,6 +4,7 @@ import CKEditor from 'ckeditor4-react';
 import { useForm } from "react-hook-form";
 import axios from 'axios'
 import './SanphamWorkplace.css'
+import NumberFormat from 'react-number-format';
 function Admin_workplace({slide}){
     const [products,setProducts] = useState([])
     const [search,setSearch] = useState('')
@@ -35,7 +36,7 @@ function Admin_workplace({slide}){
             photo:myData.photo,
             khuyenmai:myData.khuyenmai,
             danhmuc:myData.madm?{
-                madm:myData.madm
+            madm:myData.madm
             }:null
         }
         if(onUpdate){
@@ -168,7 +169,7 @@ function Admin_workplace({slide}){
                                     <td>{product.masp}</td>
                                     <td>{product.tensp}</td>
                                     <td>{product.soluong}</td>
-                                    <td>{product.dongia} $</td>
+                                    <td> <NumberFormat  value={product.dongia} thousandSeparator={true} style={{border:'0', width:'100px', textAlign:'center'}} />  VNĐ</td>
                                     <td>{product.khuyenmai}</td>
                                     <td>{product.danhmuc?.tendm}</td>
                                     <td className="custom"><p className="custom-link" onClick={()=> getDeleteSP(product.masp)}>Delete</p> </td>
@@ -197,7 +198,7 @@ function Admin_workplace({slide}){
                                                     </div>
                                                     <div className="col-7">
                                                         <h3>{product.tensp}</h3>
-                                                        <h4 className="text-danger">{product.dongia} $</h4>
+                                                        <h4 className="text-danger"><NumberFormat value={product.dongia} thousandSeparator={true} /> VNĐ</h4>
                                                         <hr/>
                                                         <div className="row">
                                                             <div className="col-6">

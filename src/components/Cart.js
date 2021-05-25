@@ -5,6 +5,7 @@ import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 import './Cart.css'
 import emailjs from 'emailjs-com';
+import NumberFormat from 'react-number-format';
 export default function Cart(){
     let myStorage = window.localStorage;
     const [user,setUser] = useState({});
@@ -167,7 +168,7 @@ export default function Cart(){
                                 <td><img src=${c.sanpham.photo} alt="picture" style="width:100px;padding:5px 30px" /></td>
                                 <td style="padding:5px 30px">${c.sanpham.tensp}</td>
                                 <td style="padding:5px 30px">Số lượng : ${c.sanpham.soluong}</td>
-                                <td style="padding:5px 30px">${c.sanpham.dongia * c.soluong} đ</td>
+                                <td style="padding:5px 30px"> ${c.sanpham.dongia * c.soluong} đ</td>
                             </tr>`
                         }
                     )}

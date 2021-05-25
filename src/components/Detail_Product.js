@@ -5,6 +5,7 @@ import './Detail_Product.css'
 import ReactStars from "react-rating-stars-component";
 import RateChart from './RateChart'
 import React,{useState,useEffect} from 'react'
+import NumberFormat from 'react-number-format';
 import {
     BrowserRouter as Router,
     Switch,
@@ -129,7 +130,7 @@ function Detail_Product(){
                         <h4>Giá tiền</h4>
                     </div>
                     <div className='col-6'>
-                    <h4 className="text-danger text-right">{sanpham?.dongia} đ</h4>
+                    <h4 className="text-danger text-right"><NumberFormat value={sanpham?.dongia} thousandSeparator = {true} style={{border:'0', width:'100px', color:'red'}} />VNĐ</h4>
                     </div>
                 </div>
                 <hr/>
