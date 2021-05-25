@@ -7,17 +7,15 @@ import { render } from '@testing-library/react'
 
 function Carousel(){
     const settings = {
-        dots : true,
-        items: 3,
-        isFinite: true,
-        autoPlay:true,
-        autoPlayduration:2000,
-        play : true,
-        setInterval: 2000
+        items :3,
+        loop: true,
+        autoplay:true,
+        autoplayTimeout:500,
+        autoplayHoverPause:true,
       };
 
     return (
-        <CarouselWrapper mode="gallery" {...settings}>
+        <CarouselWrapper mode="gallery" {...settings} >
             <img  src="https://binhminhdigital.com/StoreData/images/PageData/nhung-meo-giup-ban-chup-anh-the-thao-dep-BinhMinhDigital1.jpg"/>
             <img  src="https://c.wallhere.com/photos/d1/89/digital_art_soccer_sport_Adidas-1441095.jpg!d"/>
             <img  src="https://binhminhdigital.com/StoreData/images/PageData/nhung-meo-giup-ban-chup-anh-the-thao-dep-BinhMinhDigital2.jpg"/>

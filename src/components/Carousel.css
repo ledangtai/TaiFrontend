@@ -8,6 +8,7 @@
     margin-top: 10px;
     height: 400px;
     width: 100%;
+    border-radius: 10px;
 }
 .rpc-prev-btn{
     background-color: rgba(34, 139, 34, 0.733) !important;
