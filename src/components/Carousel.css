@@ -4,3 +4,23 @@
 .my-carousel img{
     height: 500px;
 }
+.rpc-content-item img{
+    margin-top: 10px;
+    height: 400px;
+    width: 100%;
+}
+.rpc-prev-btn{
+    background-color: rgba(34, 139, 34, 0.733) !important;
+    color: white;
+}
+.rpc-next-btn{
+    background-color: rgba(34, 139, 34, 0.733) !important;
+    color: white;
+}
+.rpc-content-controls .rpc-content-control-dots .rpc-control-dot{
+    background-color: rgba(34, 139, 34, 0.253) !important;
+  
+}
+.rpc-content-controls .rpc-content-control-dots .rpc-control-dot.active {
+    background-color: rgba(34, 139, 34, 0.733) !important;
+}
