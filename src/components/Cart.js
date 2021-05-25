@@ -239,14 +239,14 @@ export default function Cart(){
                                                 <tr key={c.sanpham.masp}>
                                                     <td><img src={c.sanpham.photo} alt="picture" style={{width:"70px",marginRight:"30px"}} /> {c.sanpham.tensp}</td>
                                                     <td style={{width:"15%"}}>Số lượng : {c.sanpham.soluong}</td>
-                                                    <td className="text-danger">{c.sanpham.dongia * c.soluong} đ</td>
+                                                    <td className="text-danger"><NumberFormat value={c.sanpham.dongia * c.soluong} thousandSeparator={true}/> VNĐ</td>
                                                 </tr>)
                                             }
                                         )}
                                         <hr/>
                                         <tr>
                                             <td colSpan="2" style={{fontSize:"23px"}}>Tổng tiền</td>
-                                            <td style={{fontSize:"23px"}}>{total} đ</td>
+                                            <td style={{fontSize:"23px"}}><NumberFormat value={total} thousandSeparator={true} /> VNĐ</td>
                                         </tr>
                                     </table>
 
@@ -268,7 +268,7 @@ export default function Cart(){
                         </div>
                         <div className="cart-total text-success">
                             <h4>Tạm tính :</h4>
-                            <h4 style={{color:'red'}}>{total} đ</h4>
+                            <h4 style={{color:'red'}}><NumberFormat value={total} thousandSeparator={true} style={{border:'0', width:'120px', backgroundColor:'forestgreen', color:'red', textAlign:'center'}} /> VNĐ</h4>
                         </div>
                         {sanpham.length>0?<button onClick={order} className="btn btn-danger btn-lg mt-4 btn-dathang" >ĐẶT HÀNG</button>:''}
                       </div>         

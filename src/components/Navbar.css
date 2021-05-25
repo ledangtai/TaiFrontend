@@ -26,17 +26,19 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    background-color: #c7c7c7;
+    background-color: rgba(34, 139, 34, 0.822);
     top: 50px;
     border-radius: 10px;
-    max-height: 400px;    
+    max-height: 200px;    
     overflow: scroll;
+}
+.searchBox .table{
+    background-color: rgba(34, 139, 34, 0.822);
 }
 .search-bar{
     padding: 5px 15px;
     border-radius: 20px;
     width: 100%;
-    
 }
 .nav-item{
     cursor: pointer;

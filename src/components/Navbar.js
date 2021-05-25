@@ -48,16 +48,13 @@ function Navbar(){
             {isSearch?
               <div className="searchBox">
               <div className="table-responsive">
-              <table className="table table-borderless table-hover table-dark" >
+              <table className="table table-borderless table-hover table-dark">
                 <tbody>
                   {products.map(sp=>{
                     if(sp.tensp.toLowerCase().includes(search.toLowerCase()))
                     return (
                       <tr key={sp.masp} onMouseDown={()=> window.location.href="/product/"+sp.masp}  >
-                          <td>{sp.masp}</td>
-                          <td>{sp.tensp}</td>
-                          <td>{sp.soluong}</td>
-                          <td>{sp.dongia}</td>
+                          <td style={{textAlign:'left', paddingLeft:'30px', fontSize:'16px'}}>{sp.tensp}</td>
                       </tr>
                     )
                   })}

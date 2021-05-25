@@ -155,7 +155,7 @@ function Detail_Product(){
                 
                 <div className="row">
                     <div className="col-6">
-                        <p>Mô chi tiết</p>
+                        <p>Chi Tiết Sản Phẩm</p>
                     </div>
                     <div className="col-12 text-left">
                         <textarea className="form-control" rows={4} defaultValue={sanpham?.mota_chitiet} disabled />

@@ -14,8 +14,7 @@ export default function Bottom(){
             </div>
             <footer className='text-center'>
                 <span className="copyright"> &copy; copyright dangtai05@gmail.com</span>
-                <div>CÔNG TY T&T
-                </div>
+                <div>CÔNG TY T&T </div>
             </footer>
         </div>
     )
